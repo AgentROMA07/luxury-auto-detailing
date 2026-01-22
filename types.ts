@@ -1,11 +1,10 @@
 export interface ServicePackage {
   id: string;
-  title_kk: string; // Заголовок на казахском
-  title_ru: string; // Заголовок на русском
+  title_kk: string;
+  title_ru: string;
   price: string;
-  benefits_kk: string[]; // Преимущества на казахском
-  benefits_ru: string[]; // Преимущества на русском
-  image: string; // Оставляем в типе, но в верстке скроем
+  benefits_kk: string[];
+  benefits_ru: string[];
 }
 
 export interface Review {
