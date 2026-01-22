@@ -166,32 +166,32 @@ const Services = () => (
   <section id="services" className="py-24 bg-[#0d0d0d]">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Основные услуги</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {SERVICES.map((s) => (
-          <div key={s.id} className="group bg-gray-900 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
-            <div className="h-56 overflow-hidden">
-              <img 
-                src={s.image} 
-                alt={s.title} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-              />
-            </div>
-            <div className="p-8 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-4">{s.title}</h3>
-              <ul className="space-y-3 mb-8 flex-grow">
-                {s.benefits.map((b, idx) => (
-                  <li key={idx} className="text-gray-400 text-sm flex items-start gap-2">
-                    <CheckCircle className="text-blue-600 shrink-0" size={16} />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex items-center justify-between mt-auto">
-                <span className="text-xl font-extrabold text-blue-500">от {s.price}</span>
-                <a href={`https://wa.me/77000000000?text=Записаться на ${s.title}`} className="p-3 bg-blue-600/10 hover:bg-blue-600 rounded-full transition-all">
-                  <ArrowRight size={20} />
-                </a>
-              </div>
+          <div 
+            key={s.id} 
+            className="group bg-gray-900 rounded-3xl flex flex-col shadow-2xl p-8"
+          >
+            <h3 className="text-xl font-bold mb-4">{s.title}</h3>
+
+            <ul className="space-y-3 mb-8">
+              {s.benefits.map((b, idx) => (
+                <li key={idx} className="text-gray-400 text-sm flex items-start gap-2">
+                  <CheckCircle className="text-blue-600 shrink-0" size={16} />
+                  {b}
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center justify-between mt-auto">
+              <span className="text-xl font-extrabold text-blue-500">от {s.price}</span>
+              <a 
+                href={`https://wa.me/77000000000?text=Записаться на ${s.title}`} 
+                className="p-3 bg-blue-600/10 hover:bg-blue-600 rounded-full transition-all"
+              >
+                <ArrowRight size={20} />
+              </a>
             </div>
           </div>
         ))}
